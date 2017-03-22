@@ -24,7 +24,7 @@ module.exports = function (deep = 10) {
         return
       }
 
-      if (index === length) {
+      if (index === length||index===undefined) {
         last.setNext(node)
         last = node
         length++

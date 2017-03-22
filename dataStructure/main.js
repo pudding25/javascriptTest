@@ -4,6 +4,9 @@ var SinglyLinkedList = require('./singlyLinkList')
 var DoublyLikedList=require('./doublyLinkList')
 var LinkedNode = require('./linkedNode')
 
+var BinaryTree=require('./binaryTree')
+var TreeNode=require('./treeNode')
+
 var args = process.argv.slice(process.execArgv.length + 2)
 if (args.length == 0) {
   args[0] = 'stack'
@@ -102,7 +105,16 @@ var $ = methods = (command) => {
   methods[command]()
 }
 
-$(args[0])
+// $(args[0])
+
+var test=new BinaryTree()
+var root=new TreeNode(-1)
+// console.log(root)
+test.addNode(root)
+for(let i =0;i<10;i++){
+  test.addNode(new TreeNode(i));
+}
+test.print(root)
 
 // {
 //         sll:()=>{

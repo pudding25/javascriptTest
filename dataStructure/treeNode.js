@@ -1,7 +1,7 @@
 module.exports=function(newData=-1){
     var data=newData
-    var prev
-    var next
+    var left
+    var right
     return {
         setData(newData){
             data=newData
@@ -9,17 +9,17 @@ module.exports=function(newData=-1){
         getData(){
             return data
         },
-        setPrev(newPrev){
-            prev=newPrev
+        setLeft(newLeft){
+            left=newLeft
         },
-        getPrev(){
-            return prev
+        getLeft(){
+            return left
         },
-        setNext(newNext){
-            next=newNext
+        setRight(newRight){
+            right=newRight
         },
-        getNext(){
-            return next
+        getRight(){
+            return right
         }
     }
 }
