@@ -1,10 +1,10 @@
 var Stack = require('./stack')
 var Queue = require('./queue')
 var SinglyLinkedList = require('./singlyLinkList')
+var DoublyLikedList=require('./doublyLinkList')
 var LinkedNode = require('./linkedNode')
 
 var args = process.argv.slice(process.execArgv.length + 2)
-console.log(args)
 if (args.length == 0) {
   args[0] = 'stack'
 }
@@ -23,7 +23,7 @@ var $ = methods = (command) => {
       for (var i = 0; i < 20; i++) {
         try {
           console.log(test.pop())
-        } catch(error) {
+        } catch (error) {
           console.log(error)
         }
       }
@@ -36,22 +36,22 @@ var $ = methods = (command) => {
     queue: () => {
       var test = new Queue(20)
 
-      for (var i = 0;i < 10;i++) {
+      for (var i = 0; i < 10; i++) {
         test.enqueue(i + 1)
       }
       test.print()
       // console.log(t.size())
 
-      for (var i = 0;i < 3;i++) {
+      for (var i = 0; i < 3; i++) {
         var tmp = test.dequeue()
         console.log(tmp ? tmp : 'is empty')
       }
       test.print()
       try {
-        for (var i = 0;i < 5;i++) {
+        for (var i = 0; i < 5; i++) {
           test.enqueue(i + 1)
         }
-      } catch(err) {
+      } catch (err) {
         console.log(err)
       }
     },
@@ -61,7 +61,7 @@ var $ = methods = (command) => {
         t.add(new LinkedNode(i + 21), i)
       }
 
-      
+
       t.print()
       for (var i = 0; i < 5; i++) {
         t.remove(0)
@@ -70,12 +70,32 @@ var $ = methods = (command) => {
       t.print()
       try {
         t.modify(99, 100)
-      } catch(err) {
-        console.error('--->',err)
+      } catch (err) {
+        console.error('--->', err)
       }
 
       console.log("----------------------")
 
+      t.print()
+    },
+    dll: () => {
+      var t = DoublyLikedList()
+      for (var i = 0; i < 10; i++) {
+        t.add(new LinkedNode(i + 1), i)
+      }
+      t.print()
+      t.remove(0)
+      t.print()
+      try {
+        t.modify(99, 0)
+      } catch (err) {
+        console.error(err)
+      }
+      try {
+        t.modify(99, 100)
+      } catch (err) {
+        console.error(err)
+      }
       t.print()
     }
   }
