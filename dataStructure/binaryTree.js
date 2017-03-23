@@ -15,7 +15,8 @@ module.exports = function () {
         return
       }
       let target = root
-      let last = 1
+      let last = 0
+      let back
       //   console.log('deep is', deep,'last is',last)
       while(true){
         if (target.getLeft() === undefined) {
@@ -30,20 +31,29 @@ module.exports = function () {
           length++
           break
         }else {
-          last++
-          if (last == deep) {
-            if (target.getLeft() == undefined) {
-              target = target.getLeft()
-              console.log('get leftChild..', target.getData(), 'new node is', newNode.getData(),deep,last)
-            }else {
-              target = target.getRight()
-              console.log('get right Child....', target.getData(), 'new node is', newNode.getData(),deep,last)
+
+            //use array[index] index=action count
+            if(last<1){
+                target=target.getLeft()
+            }else{
+                if(last %2===1){}
             }
-          }else {
-            target = target.getLeft()
-            console.log('get leftChild', target.getData(), 'new node is', newNode.getData(),deep,last)
-            deep++
-          }
+            last++
+            
+        //   last++
+        //   if (last == deep) {
+        //     if (target.getLeft() == undefined) {
+        //       target = target.getLeft()
+        //       console.log('get leftChild..', target.getData(), 'new node is', newNode.getData(),deep,last)
+        //     }else {
+        //       target = target.getRight()
+        //       console.log('get right Child....', target.getData(), 'new node is', newNode.getData(),deep,last)
+        //     }
+        //   }else {
+        //     target = target.getLeft()
+        //     console.log('get leftChild', target.getData(), 'new node is', newNode.getData(),deep,last)
+        //     deep++
+        //   }
         }
       }
     },

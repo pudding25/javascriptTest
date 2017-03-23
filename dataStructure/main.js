@@ -112,9 +112,9 @@ var root=new TreeNode(0)
 // console.log(root)
 test.addNode(root)
 /*
-       0
-   1      2
- 3  4    
+        0
+    1      2
+  3  4    
 5  6
 
 0
