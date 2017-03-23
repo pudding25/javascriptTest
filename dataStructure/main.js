@@ -106,15 +106,25 @@ var $ = methods = (command) => {
 }
 
 // $(args[0])
-
+console.time("time")
 var test=new BinaryTree()
-var root=new TreeNode(-1)
+var root=new TreeNode(0)
 // console.log(root)
 test.addNode(root)
-for(let i =0;i<10;i++){
+/*
+       0
+   1      2
+ 3  4    
+5  6
+
+0
+1 
+ */
+for(let i =1;i<7;i++){
   test.addNode(new TreeNode(i));
 }
-test.print(root)
+test.perPrint(root)
+console.timeEnd("time")
 
 // {
 //         sll:()=>{
