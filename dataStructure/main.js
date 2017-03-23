@@ -116,11 +116,9 @@ test.addNode(root)
     1      2
   3  4    
 5  6
-
-0
-1 
+ 
  */
-for(let i =1;i<7;i++){
+for(let i =1;i<10;i++){
   test.addNode(new TreeNode(i));
 }
 test.perPrint(root)

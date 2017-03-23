@@ -2,6 +2,7 @@ module.exports=function(newData=-1){
     var data=newData
     var left
     var right
+    var parent
     return {
         setData(newData){
             data=newData
@@ -20,6 +21,12 @@ module.exports=function(newData=-1){
         },
         getRight(){
             return right
+        },
+        setParent(newParent){
+            parent=newParent
+        },
+        getParent(){
+            return parent
         }
     }
 }
