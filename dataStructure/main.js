@@ -66,20 +66,23 @@ var $ = methods = (command) => {
 
 
       t.print()
-      for (var i = 0; i < 5; i++) {
-        t.remove(0)
-      }
-      console.log("----------------------")
+      t.reverse()
+      console.log("---------")
       t.print()
-      try {
-        t.modify(99, 100)
-      } catch (err) {
-        console.error('--->', err)
-      }
+      // for (var i = 0; i < 5; i++) {
+      //   t.remove(0)
+      // }
+      // console.log("----------------------")
+      // t.print()
+      // try {
+      //   t.modify(99, 100)
+      // } catch (err) {
+      //   console.error('--->', err)
+      // }
 
-      console.log("----------------------")
+      // console.log("----------------------")
 
-      t.print()
+      // t.print()
     },
     dll: () => {
       var t = DoublyLikedList()
@@ -106,23 +109,49 @@ var $ = methods = (command) => {
 }
 
 // $(args[0])
+
+
 console.time("time")
 var test=new BinaryTree()
 var root=new TreeNode(0)
 // console.log(root)
+var tmp=root;
+tmp.setLeft(new TreeNode(1,tmp))
+tmp.setRight(new TreeNode(2,tmp))
+
+tmp=root.getLeft()
+tmp.setLeft(new TreeNode(3,tmp))
+tmp.setRight(new TreeNode(4,tmp))
+
+tmp=root.getRight()
+tmp.setLeft(new TreeNode(5,tmp))
+tmp.setRight(new TreeNode(6,tmp))
+
 test.addNode(root)
+
+test.perOrder(root)
+console.log("-----------------------")
+test.perOrderNonRecursive(root)
+console.log("-----------------------")
+test.perOrderNonRecursive2(root)
+
+
 /*
         0
     1      2
-  3  4    
-5  6
+  3  4   5   6
+
  
  */
-for(let i =1;i<10;i++){
-  test.addNode(new TreeNode(i));
-}
-test.perPrint(root)
-console.timeEnd("time")
+// for(let i =1;i<10;i++){
+//   test.addNode(new TreeNode(i));
+// }
+// test.perOrder(root)
+
+// console.log("----------------------------")
+
+// test.inOrder(root)
+// console.timeEnd("time")
 
 // {
 //         sll:()=>{

@@ -7,7 +7,7 @@ module.exports = function (deep = 10) {
 
   var findNode = (index) => {
     let tmp = head.getNext()
-    for (var i = 0;i < length;i++) {
+    for (var i = 0; i < length; i++) {
       if (index === i) {
         return tmp
       }
@@ -24,7 +24,7 @@ module.exports = function (deep = 10) {
         return
       }
 
-      if (index === length||index===undefined) {
+      if (index === length || index === undefined) {
         last.setNext(node)
         last = node
         length++
@@ -46,7 +46,7 @@ module.exports = function (deep = 10) {
 
       if (index === 0) {
         target = head
-      }else {
+      } else {
         target = findNode(index - 1)
       }
 
@@ -81,11 +81,30 @@ module.exports = function (deep = 10) {
       return length
     },
     print() {
-      let tmp = head.getNext()
-      for (var i = 0;i < length;i++) {
+      // let tmp = head.getNext()
+      // for (var i = 0;i < length;i++) {
+      //   console.log(tmp.getData())
+      //   tmp = tmp.getNext()
+      // }
+      let tmp = head
+      while ((tmp = tmp.getNext()) != undefined) {
         console.log(tmp.getData())
-        tmp = tmp.getNext()
       }
+    },
+    reverse() {
+      let oldNext
+      let oldPrev
+      let node = head.getNext()
+      while (node !== undefined) {
+        oldNext = node.getNext()
+        // console.log(node.getData(),"   ",node.getNext()?node.getNext().getData():-1)
+        node.setNext(oldPrev);
+        // console.log(node.getData()," - ",node.getNext()?node.getNext().getData():-1)
+        oldPrev = node
+        node = oldNext
+        
+      }
+      head.setNext(node?node:oldPrev)
     }
   }
 }

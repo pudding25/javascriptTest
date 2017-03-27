@@ -1,8 +1,8 @@
-module.exports=function(newData=-1){
+module.exports=function(newData=-1,newParent){
     var data=newData
     var left
     var right
-    var parent
+    var parent=newParent
     return {
         setData(newData){
             data=newData

@@ -30,6 +30,9 @@ module.exports = function (maxLength = 10) {
     print() {
       // stack.forEach((value,index,array))
       stack.forEach(console.log)
+    },
+    isEmpty(){
+      return length ===0
     }
   }
 }
