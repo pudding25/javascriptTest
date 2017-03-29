@@ -1,28 +1,31 @@
-module.exports=function(maxLength=10){
-    var first=0
-    var rear=0
-    var length=0
-    var max=maxLength
-    var queue=new Array(max)
+module.exports = function (maxLength = 10) {
+    var first = 0
+    var rear = 0
+    var length = 0
+    var max = maxLength
+    var queue = new Array(max)
     return {
-        enqueue(element){
-            queue[rear++]=element
+        enqueue(element) {
+            queue[rear++] = element
             length++
         },
-        dequeue(){
-            var result=queue[first]
-            queue[first++]=null
+        dequeue() {
+            var result = queue[first]
+            queue[first++] = null
             length--
             return result
         },
-        peek(){
+        peek() {
             return queue[first]
         },
-        size(){
+        size() {
             return length
         },
-        print(){
+        print() {
             queue.forEach(console.log)
+        },
+        isEmpty() {
+            return length === 0
         }
     }
 }

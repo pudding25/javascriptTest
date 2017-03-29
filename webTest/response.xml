@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cart>
+    <user id='9527'>
+        <account id='9527'>
+            <card>
+                <cardName>1</cardName>
+            </card>
+            <card cardName='2'/>
+            <card cardName='3'/>
+        </account>
+        <items count='5'>
+            <item id='1' price='0.23'/>
+            <item id='2' price='0.23'/>
+            <item id='3' price='0.23'/>
+            <item id='4' price='0.23'/>
+            <item id='5' price='0.23'/>                     
+        </items>
+    </user>
+</cart>

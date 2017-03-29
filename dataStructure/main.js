@@ -1,11 +1,11 @@
 var Stack = require('./stack')
 var Queue = require('./queue')
 var SinglyLinkedList = require('./singlyLinkList')
-var DoublyLikedList=require('./doublyLinkList')
+var DoublyLikedList = require('./doublyLinkList')
 var LinkedNode = require('./linkedNode')
 
-var BinaryTree=require('./binaryTree')
-var TreeNode=require('./treeNode')
+var BinaryTree = require('./binaryTree')
+var TreeNode = require('./treeNode')
 
 var args = process.argv.slice(process.execArgv.length + 2)
 if (args.length == 0) {
@@ -112,28 +112,30 @@ var $ = methods = (command) => {
 
 
 console.time("time")
-var test=new BinaryTree()
-var root=new TreeNode(0)
+var test = new BinaryTree()
+var root = new TreeNode(0)
 // console.log(root)
-var tmp=root;
-tmp.setLeft(new TreeNode(1,tmp))
-tmp.setRight(new TreeNode(2,tmp))
+// var tmp=root;
+// tmp.setLeft(new TreeNode(1,tmp))
+// tmp.setRight(new TreeNode(2,tmp))
 
-tmp=root.getLeft()
-tmp.setLeft(new TreeNode(3,tmp))
-tmp.setRight(new TreeNode(4,tmp))
+// tmp=root.getLeft()
+// tmp.setLeft(new TreeNode(3,tmp))
+// tmp.setRight(new TreeNode(4,tmp))
 
-tmp=root.getRight()
-tmp.setLeft(new TreeNode(5,tmp))
-tmp.setRight(new TreeNode(6,tmp))
+// tmp=root.getRight()
+// tmp.setLeft(new TreeNode(5,tmp))
+// tmp.setRight(new TreeNode(6,tmp))
 
-test.addNode(root)
+// test.addNode(root)
 
-test.perOrder(root)
-console.log("-----------------------")
-test.perOrderNonRecursive(root)
-console.log("-----------------------")
-test.perOrderNonRecursive2(root)
+// test.postOrder(root)
+// console.log("-----------------------")
+// test.postOrderNonRecursive(root)
+// console.log("-----------------------")
+// test.inOrderNonRecursive1(root)
+// console.log("-----------------------")
+
 
 
 /*
@@ -141,12 +143,16 @@ test.perOrderNonRecursive2(root)
     1      2
   3  4   5   6
 
- 
+                          0
+              1                         2
+        3          4             5             6
+    7     8     9     10     11     12     13     14 
  */
-// for(let i =1;i<10;i++){
-//   test.addNode(new TreeNode(i));
-// }
-// test.perOrder(root)
+test.addNode(root)
+for(let i =1;i<15;i++){
+  test.addNode(new TreeNode(i));
+}
+test.postOrder(root)
 
 // console.log("----------------------------")
 
