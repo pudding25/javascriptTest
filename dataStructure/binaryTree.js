@@ -25,12 +25,12 @@ module.exports = function () {
                 // console.log("get target[%d]", target.getData())
 
                 if (target.getLeft() === undefined) {
-                    console.log("set [%d] to [%d] left", newNode.getData(),target.getData())
+                    console.log("set [%d] to [%d] left", newNode.getData(), target.getData())
                     target.setLeft(newNode)
                     return
                 }
                 if (target.getRight() === undefined) {
-                    console.log("set [%d] to [%d] right",newNode.getData(), target.getData())
+                    console.log("set [%d] to [%d] right", newNode.getData(), target.getData())
                     target.setRight(newNode)
                     return
                 }
@@ -220,6 +220,30 @@ module.exports = function () {
 
 
 
+            }
+        }
+        ,
+        levelTraverse(targetNode) {
+            let queue = new Queue(2)
+            queue.enqueue(targetNode)
+            let node
+            while (!queue.isEmpty()) {
+
+                node = queue.dequeue()
+
+                console.log("targetNode.data=", node.getData())
+                // console.log("data=[%d],queue.size=[%d]",node.getData(),queue.size())
+                if (node.getLeft() !== undefined) {
+                    // console.log("set [%d] left in queue",node.getData())
+                    queue.enqueue(node.getLeft())
+                }
+                if (node.getRight() !== undefined) {
+                    // console.log("set [%d] right in queue",node.getData())
+
+                    queue.enqueue(node.getRight())
+                }
+                // console.log("data=[%d],queue.size=[%d]",node.getData(),queue.size())
+                // queue.print()
             }
         }
     }

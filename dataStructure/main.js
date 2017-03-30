@@ -152,7 +152,7 @@ test.addNode(root)
 for(let i =1;i<15;i++){
   test.addNode(new TreeNode(i));
 }
-test.postOrder(root)
+test.levelTraverse(root)
 
 // console.log("----------------------------")
 
