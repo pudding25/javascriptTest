@@ -191,7 +191,7 @@ var code496 = function (findNums, nums) {
   let result = [];
   findNums.forEach((value, index) => {
     let tmp = -1;
-    for (let i = index + 1; i < nums.length; i++) {
+    for (let i = index ; i < nums.length; i++) {
       if (value < nums[i]) {
         tmp = nums[i];
         break;
