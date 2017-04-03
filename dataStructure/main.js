@@ -148,12 +148,62 @@ var root = new TreeNode(0)
         3          4             5             6
     7     8     9     10     11     12     13     14 
  */
-test.addNode(root)
-for(let i =1;i<15;i++){
-  test.addNode(new TreeNode(i));
-}
-test.levelTraverse(root)
+// test.addNode(root)
+// for(let i =1;i<15;i++){
+//   test.addNode(new TreeNode(i));
+// }
+// test.levelTraverse(root)
+var code461 = function (n, m) {
+  var a = (n ^ m).toString(2)
+  console.log('n=[%d,%s],m=[%d,%s],a=[%d,%s]', n, n.toString(2), m, m.toString(2), n ^ m, a);
+  return (n ^ m).toString(2).replace(/0/g, '').length;
+};
 
+var code500 = (words) => {
+  var tmp = { a: 2, b: 3, c: 3, d: 2, e: 1, f: 2, g: 2, h: 2, i: 1, j: 2, k: 2, l: 2, m: 3, n: 3, o: 1, p: 1, q: 1, r: 1, s: 2, t: 1, u: 1, v: 3, w: 1, x: 3, y: 1, z: 3 }
+  let last = 0;
+  let result = []
+  words.forEach((word, ind) => {
+    last = tmp[word[0].toLowerCase()];
+    for (var index = 1; index < word.length; index++) {
+      if (last != tmp[word[index].toLowerCase()]) {
+        return;
+      }
+      if (index === word.length - 1) {
+        result.push(word);
+      }
+    }
+  });
+  return result;
+};
+
+
+var code344 = function (s) {
+  //1.loop end to start
+  //2.reduceRight
+  return s.split("").reduceRight((previous, current) => {
+    return previous + current;
+  });
+
+};
+
+var code496 = function (findNums, nums) {
+  let result = [];
+  findNums.forEach((value, index) => {
+    let tmp = -1;
+    for (let i = index + 1; i < nums.length; i++) {
+      if (value < nums[i]) {
+        tmp = nums[i];
+        break;
+      }
+    }
+    result.push(tmp);
+  });
+  return result;
+};
+// console.log(code500(["Hello", "Alaska", "Dad", "Peace"]));
+// console.log(code344("Hello"));
+console.log(code496([4, 1, 2], [1, 3, 4, 2]));
 // console.log("----------------------------")
 
 // test.inOrder(root)
