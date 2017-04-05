@@ -201,9 +201,15 @@ var code496 = function (findNums, nums) {
   });
   return result;
 };
+
+var code476 =function(num){
+  console.log((1<<num),(1<<num).toString(2),((1<<num) -1 ),((1<<num) -1 ).toString(2));
+  console.log('a=[%s],b=[%s],a & b =[%s],a | b =[%s],a ^ b =[%s],~a =[%s]',(num & 0).toString(2),num.toString(2),0..toString(2),(num ^ 0).toString(2),(num ^ 0).toString(2),(~ num).toString(2));
+  return num ^ 0;
+};
 // console.log(code500(["Hello", "Alaska", "Dad", "Peace"]));
 // console.log(code344("Hello"));
-console.log(code496([4, 1, 2], [1, 3, 4, 2]));
+console.log(code476(5));
 // console.log("----------------------------")
 
 // test.inOrder(root)
