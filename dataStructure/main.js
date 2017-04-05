@@ -209,7 +209,8 @@ var code476 =function(num){
 };
 // console.log(code500(["Hello", "Alaska", "Dad", "Peace"]));
 // console.log(code344("Hello"));
-console.log(code476(5));
+console.log(code496([4,1,2],[1,3,4,2] ));
+// console.log(code476(5));
 // console.log("----------------------------")
 
 // test.inOrder(root)
