@@ -125,7 +125,7 @@ var code1_2 = (nums, target) => {
     }
 };
 
-var code15 = (nums) => {
+var code15 = nums => {
     let map = [];
     let index = 0;
     for (let i = 0; i < nums.length; i++) {
@@ -142,8 +142,8 @@ var code15 = (nums) => {
 
 
 
-// console.log(code15([-1, 0, 1, 2, -1, -4]));
-console.log(code1_2([3,3], 6));
+console.log(code15([-1, 0, 1, 2, -1, -4]));
+// console.log(code1_2([3,3], 6));
 // console.log(code58("a "));
 // console.log(code434("Of all the gin joints in all the towns in all the world,   "));
 // console.log(code541("nmcauqjhnavcckbxetgiovrqmwzwpuadbykrxliduaqrpjyfxjxwsxnhsuisjeuxgonvnfvbruevticwnfnnbnnbvgsfxycsixlbegpkmwkeahndcruwmsigqaolitcxabjhowfrkbjqxctpvcxtoehxipzbkhorethhtjilzhdnlkwjwwxtolshrgbxtmtbfgiymwcpbgovrgfkouxempdqhkqgfodujzblzmnnfraridpdhhvlwecbgqjtkouxvtgcisccgwdyxqrtjrsxubputvcqtbvbcuhlwlihpjhrxbawfxcqokudvkgaiqgbtqlhxfeymqffngpwelztururvuhjnzylqlogexbxxvtqrcdqabxvdnviohjygfwebrmvaijeyaluqgyrtrrxrwaxoqvulqdtxyvyncudxmvqnppyopqasimvmzzrkdwjngrzlacejafzfcvthahhrheeeqjklkjjgntjvfimaeeoicfoaiockmvawfcwsafrzqgspezqjwqwhotgsbhnfvxtewqoaecwgpjkilxsxadoxyhksdiyzxnjzjapcczymffvstkbnirujftqccwygwaaimjfnalabntmkqvorwymejghztyljmnduauobltgsbfmbnycbjusxemxsopgqoypmeuwhqcqhiawmdyupqvceqiluutiokxfvddjxbhkcfpjpydululquiwlmvuyynmnehfmevangczlbsvbqifmsgscsswhgmugsuuehpibcjnfpuiexxsbqkbidsmnbuijcrpcbzqjricgdirlzmzmjsjuvevigmmyezqtfvyqtbieveifyfemgscfllhrpzrinlcguwaxdnapbmulcrioqqpubmoymixwettitmtvrhquqpyrkyzpdhxmovfesrnmoylqwcqaarnarvcsqyejkjcqlfvtqvzoynhylydvazpdeyjsifpbsnsvgigvrjqhfjupxmyvvkipsptw",
